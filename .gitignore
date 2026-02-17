@@ -1,0 +1,45 @@
+# Secrets & Config locale
+.env
+.env.*
+*.key
+*.pem
+
+# Logs
+.logs/
+*.log
+
+# Temp & Cache
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+
+# Build artifacts
+dist/
+node_modules/
+src-tauri/target/
+src-tauri/gen/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Modèle IA (trop lourd pour git)
+src-tauri/resources/model.onnx
+src-tauri/resources/*.onnx
+
+# ONNX Runtime — téléchargés automatiquement par `ort` à la compilation
+src-tauri/lib/
+src-tauri/include/
+src-tauri/CodeSignSummary-*.md
+src-tauri/GIT_COMMIT_ID
+src-tauri/LICENSE
+src-tauri/Privacy.md
+src-tauri/ThirdPartyNotices.txt
+src-tauri/VERSION_NUMBER

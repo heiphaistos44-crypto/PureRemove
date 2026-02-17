@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 263 70% 68%;
+    --primary: 263 70% 68%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 222 47% 16%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 223 47% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 263 70% 68%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 0 63% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Autoriser la sélection dans les inputs */
+  input, textarea {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+@layer utilities {
+  /* Fond à damier pour visualiser la transparence */
+  .checkerboard {
+    background-image:
+      linear-gradient(45deg, #374151 25%, transparent 25%),
+      linear-gradient(-45deg, #374151 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #374151 75%),
+      linear-gradient(-45deg, transparent 75%, #374151 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    background-color: #1f2937;
+  }
+
+  /* Scrollbar dark */
+  .scrollbar-thin::-webkit-scrollbar { width: 5px; }
+  .scrollbar-thin::-webkit-scrollbar-track { @apply bg-muted; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover { @apply bg-muted-foreground; }
+}

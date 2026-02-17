@@ -1,0 +1,3 @@
+# Place model.onnx here (RMBG-1.4)
+# Download from: https://huggingface.co/briaai/RMBG-1.4
+# File: onnx/model.onnx  ->  rename to model.onnx
