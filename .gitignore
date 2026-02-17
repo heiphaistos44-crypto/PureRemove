@@ -30,10 +30,6 @@ desktop.ini
 .vscode/settings.json
 .idea/
 
-# Modèle IA (trop lourd pour git)
-src-tauri/resources/model.onnx
-src-tauri/resources/*.onnx
-
 # ONNX Runtime — téléchargés automatiquement par `ort` à la compilation
 src-tauri/lib/
 src-tauri/include/
