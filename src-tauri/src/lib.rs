@@ -1,15 +1,21 @@
 pub mod commands;
-pub mod error;
 pub mod image_processor;
 pub mod ml_engine;
 
 use commands::*;
+use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
+        .setup(|app| {
+            if let Some(window) = app.get_webview_window("main") {
+                let _ = window.set_icon(tauri::include_image!("icons/icon.ico"));
+            }
+            Ok(())
+        })
         .invoke_handler(tauri::generate_handler![
             process_single_image,
             process_batch_images,

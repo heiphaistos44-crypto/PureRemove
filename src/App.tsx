@@ -244,11 +244,8 @@ export default function App() {
       {/* ── Header ── */}
       <header className="flex items-center justify-between px-6 py-3 border-b border-border flex-shrink-0">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-            <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-            </svg>
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+            <img src="/logo.png" alt="PureRemove" className="w-full h-full object-cover" />
           </div>
           <span className="text-foreground font-bold text-lg tracking-tight">PureRemove</span>
           <span className="text-muted-foreground text-xs bg-secondary px-2 py-0.5 rounded-full">v1.2</span>

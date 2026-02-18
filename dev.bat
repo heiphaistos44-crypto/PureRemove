@@ -1,5 +1,9 @@
 @echo off
 title PureRemove - Dev Mode
 cd /d "%~dp0"
-echo [PRE-OPS] Lancement PureRemove en mode developpement...
-npm run tauri dev
+echo Demarrage...
+npx tauri dev > .logs\dev.log 2>&1
+echo Termine. Code: %ERRORLEVEL%
+type .logs\dev.log
+echo.
+pause
